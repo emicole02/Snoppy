@@ -21,7 +21,7 @@ docker compose -f docker-compose.base44.yml up -d
 Edit `Index.html`, `styles.css` or `main.js` directly — changes appear on browser refresh. There is no live-reload/HMR; call `reload_preview` after edits. nginx sends `Cache-Control: no-store` so refreshes always fetch fresh files.
 
 ## Verification
-- `curl http://localhost:3000/` should return the HTML with `<title>ColLab</title>`.
+- `curl http://localhost:3000/` should return the HTML with `<title>PRIME — Sports Platform</title>`.
 - Healthcheck uses `127.0.0.1` (not `localhost`) because nginx listens on IPv4 only and `localhost` resolves to IPv6 `::1` inside the container.
 
 ## No Secrets Required
