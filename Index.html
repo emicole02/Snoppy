@@ -1,12 +1,83 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <Meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>ColLab</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIME — Sports Platform</title>
+  <meta name="description" content="Connect, train and play. Book courts, meet players at your level and never miss a game — the modern sports platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ColLab</h1>
-    <p>Aprende hoy, enseña mañana</p>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#" aria-label="PRIME home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="15.5" cy="4.2" r="2.1"/>
+          <path d="M13.4 8.2 10 12.4l3.1 2.9.9 5"/>
+          <path d="m10 12.4-4.2 1.1"/>
+          <path d="m16.2 15.4-4.2.9"/>
+        </svg>
+      </span>
+      <span class="brand-name">PRIME</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#">Home</a>
+      <a href="#">Courts</a>
+      <a href="#">Community</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <a class="btn-signin" href="#">Sign In</a>
+  </header>
+
+  <main class="hero">
+    <div class="hero-copy" data-parallax="-16">
+      <p class="eyebrow reveal" style="--d:.15s">Sports Platform</p>
+
+      <h1 class="headline">
+        <span class="line"><span class="line-inner" style="--d:.26s">Connect, Train</span></span>
+        <span class="line"><span class="line-inner" style="--d:.38s">And Play,</span></span>
+        <span class="line"><span class="line-inner" style="--d:.50s">With <em>Prime.</em></span></span>
+      </h1>
+
+      <p class="lede reveal" style="--d:.66s">Book courts in seconds, meet players at your level, and never miss a game again — all in one place.</p>
+
+      <div class="cta reveal" style="--d:.80s">
+        <a class="btn btn-primary" href="#">Get Started</a>
+        <a class="btn btn-ghost" href="#">Explore Courts</a>
+      </div>
+    </div>
+
+    <div class="hero-art" data-parallax="22" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ball">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.6">
+          <circle cx="50" cy="50" r="46"/>
+          <path d="M24 11c19 21 19 57 0 78"/>
+          <path d="M76 11c-19 21-19 57 0 78"/>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Book Courts</span><i>•</i><span>Find Players</span><i>•</i><span>Join Clubs</span><i>•</i><span>Track Progress</span><i>•</i>
+      <span>Book Courts</span><i>•</i><span>Find Players</span><i>•</i><span>Join Clubs</span><i>•</i><span>Track Progress</span><i>•</i>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

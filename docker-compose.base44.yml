@@ -13,7 +13,7 @@ services:
         # Run nginx as root so it can read the bind-mounted source regardless of host dir perms
         sed -i 's/^user .*/user root;/' /etc/nginx/nginx.conf
         # Serve Index.html (capital I) as the directory index
-        printf 'server {\n  listen 80;\n  server_name _;\n  root /usr/share/nginx/html;\n  index Index.html;\n  location / { try_files $$uri $$uri/ =404; }\n}\n' > /etc/nginx/conf.d/default.conf
+        printf 'server {\n  listen 80;\n  server_name _;\n  root /usr/share/nginx/html;\n  index Index.html;\n  add_header Cache-Control "no-store" always;\n  location / { try_files $$uri $$uri/ =404; }\n}\n' > /etc/nginx/conf.d/default.conf
         exec nginx -g 'daemon off;'
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:80/"]

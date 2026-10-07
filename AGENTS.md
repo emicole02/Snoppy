@@ -1,7 +1,12 @@
 # Base44 Dev Environment
 
 ## Project Overview
-This is a minimal static HTML project — a single `Index.html` file (note the capital "I") serving a "ColLab" landing page. No build system, no dependencies, no backend.
+A static landing page (no build system, no backend, no dependencies). Files:
+- `Index.html` — the page (note the capital "I"; nginx is configured to use it as the directory index)
+- `styles.css` — all styling and animations
+- `main.js` — pointer interactions (cursor spotlight + parallax)
+
+Fonts (`Anton`, `Inter`) load from Google Fonts in the browser, with system fallbacks.
 
 ## Running the App
 ```
@@ -13,7 +18,7 @@ docker compose -f docker-compose.base44.yml up -d
 - nginx runs as root so it can read the bind-mounted source regardless of host directory permissions.
 
 ## Editing
-Edit `Index.html` directly — changes appear on browser refresh. There is no live-reload/HMR; call `reload_preview` after edits if needed.
+Edit `Index.html`, `styles.css` or `main.js` directly — changes appear on browser refresh. There is no live-reload/HMR; call `reload_preview` after edits. nginx sends `Cache-Control: no-store` so refreshes always fetch fresh files.
 
 ## Verification
 - `curl http://localhost:3000/` should return the HTML with `<title>ColLab</title>`.
